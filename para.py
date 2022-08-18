@@ -5,8 +5,8 @@ For 1D set Ny=1,Nz=1,Lx=1,Lz=1
 For 2D set Nz=1,Lz=1
 '''
 # Set box length
-Lx =32
-Ly =32
+Lx = 32
+Ly = 32
 Lz = 1
 
 # Set grid size 
