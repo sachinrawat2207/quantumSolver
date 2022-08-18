@@ -113,5 +113,3 @@ if showflux:
 # plt.xlim([0,k[-1]+1])
 # plt.savefig('Tkt%d.png'%int(para.tmax))
 # plt.close()
-
-
