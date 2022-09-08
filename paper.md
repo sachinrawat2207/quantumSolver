@@ -35,6 +35,7 @@ aas-journal: Astrophysical Journal <- The name of the AAS journal.
 ---
 
 # Summary
+Bose-Einstein condensate is widely used to study turbulence in quantum system.
 
 The forces on stars, galaxies, and dark matter under external gravitational
 fields lead to the dynamical evolution of structures in the universe. The orbits
