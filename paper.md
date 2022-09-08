@@ -17,20 +17,17 @@ authors:
     affiliation: 2
   - name: Mahendra Kumar Verma
   - orcid: 0000-0002-3380-4561
-    affiliation: 3
+    affiliation: 1
   - name: Pankaj Kumar Mishra
   - orcid: 0000-0003-4907-4724
-    affiliation: 4
+    affiliation: 2
 
 affiliations:
  - name: Department of Physics, Indian Institute of Technology - Kanpur, Uttar Pradesh - 208016, India
    index: 1
  - name: Department of Physics, Indian Institute of Technology - Guwahati, Asam - 781039, India
    index: 2
- - name: Department of Physics, Indian Institute of Technology - Kanpur, Uttar Pradesh - 208016, India
-   index: 3
- - name: Department of Physics, Indian Institute of Technology - Guwahati, Asam - 781039, India
-   index: 4
+
 date: 09 August 2022
 bibliography: paper.bib
 
