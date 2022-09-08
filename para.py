@@ -1,5 +1,4 @@
 from set_device import ncp
-
 '''
 For 1D set Ny=1,Nz=1,Lx=1,Lz=1
 For 2D set Nz=1,Lz=1
