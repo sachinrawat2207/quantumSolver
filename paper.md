@@ -2,12 +2,12 @@
 title: 'Gala: A Python package for galactic dynamics'
 tags:
   - Python
-  - astronomy
-  - dynamics
-  - galactic dynamics
-  - milky way
+  - Quantum turbulence
+  - Bose-Einstein condensate
+
+
 authors:
-  - name: Adrian M. Price-Whelan
+  - name: Sachin Singh Rawat
     orcid: 0000-0000-0000-0000
     equal-contrib: true
     affiliation: "1, 2" # (Multiple affiliations must be quoted)
