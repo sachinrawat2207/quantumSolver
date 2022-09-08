@@ -8,12 +8,12 @@ tags:
 
 authors:
   - name: Sachin Singh Rawat
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0002-5701-7247
     equal-contrib: true
-    affiliation: 1 # (Multiple affiliations must be quoted)
+    affiliation: 1
   - name: Shawan Kumar Jha
   - orcid: 0000-0000-0000-0000
-    equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
+    equal-contrib: true 
     affiliation: 2
   - name: Mahendra Kumar Verma
   - orcid: 0000-0002-3380-4561
@@ -83,6 +83,8 @@ You can also use plain \LaTeX for equations
 and refer to \autoref{eq:fourier} from text.
 
 # Citations
+
+- `[@author:2001]` -> "(Author et al., 2001)"
 
 Citations to entries in paper.bib should be in
 [rMarkdown](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
