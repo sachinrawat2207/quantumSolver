@@ -16,8 +16,10 @@ authors:
     equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
     affiliation: 2
   - name: Mahendra Kumar Verma
+  - orcid: 0000-0002-3380-4561
     affiliation: 3
   - name: Pankaj Kumar Mishra
+  - orcid: 0000-0003-4907-4724
     affiliation: 4
 
 affiliations:
