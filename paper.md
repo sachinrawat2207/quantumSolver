@@ -10,22 +10,25 @@ authors:
   - name: Sachin Singh Rawat
     orcid: 0000-0000-0000-0000
     equal-contrib: true
-    affiliation: "1, 2" # (Multiple affiliations must be quoted)
+    affiliation: 1 # (Multiple affiliations must be quoted)
   - name: Shawan Kumar Jha
   - orcid: 0000-0000-0000-0000
     equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
     affiliation: 2
-  - name: Author with no affiliation
-    corresponding: true # (This is how to denote the corresponding author)
+  - name: Mahendra Kumar Verma
     affiliation: 3
+  - name: Pankaj Kumar Mishra
+    affiliation: 4
+
 affiliations:
- - name: Lyman Spitzer, Jr. Fellow, Princeton University, USA
+ - name: Department of Physics, Indian Institute of Technology - Kanpur, Uttar Pradesh - 208016, India
    index: 1
- - name: Institution Name, Country
+ - name: Department of Physics, Indian Institute of Technology - Guwahati, Asam - 781039, India
    index: 2
- - name: Independent Researcher, Country
+ - name: Department of Physics, Indian Institute of Technology - Kanpur, Uttar Pradesh - 208016, India
    index: 3
-date: 13 August 2017
+ - name: Department of Physics, Indian Institute of Technology - Guwahati, Asam - 781039, India
+date: 09 August 2022
 bibliography: paper.bib
 
 # Optional fields if submitting to a AAS journal too, see this blog post:
@@ -35,21 +38,14 @@ aas-journal: Astrophysical Journal <- The name of the AAS journal.
 ---
 
 # Summary
-Bose-Einstein condensate is widely used to study turbulence in quantum system.
+The Gross-Pitaevskii equation(GPE) is a useful model to study the quantum turbulence in Bose-Einstein condensate at absolute zero temperature.
+The Bose-Einstein condensate is a quantum fluid system and shows the behavior of superfluid. In quantum fluid, the wave nature of particles starts dominating i.e., the de Broglie wavelength of the particles becomes greater than the inter-atomic distances between the particles. 
 
-The forces on stars, galaxies, and dark matter under external gravitational
-fields lead to the dynamical evolution of structures in the universe. The orbits
-of these bodies are therefore key to understanding the formation, history, and
-future state of galaxies. The field of "galactic dynamics," which aims to model
-the gravitating components of galaxies to study their structure and evolution,
-is now well-established, commonly taught, and frequently used in astronomy.
-Aside from toy problems and demonstrations, the majority of problems require
-efficient numerical tools, many of which require the same base code (e.g., for
-performing numerical orbit integration).
+
 
 # Statement of need
 
-`Gala` is an Astropy-affiliated Python package for galactic dynamics. Python
+`Quantum solver` is an Astropy-affiliated Python package for galactic dynamics. Python
 enables wrapping low-level languages (e.g., C) for speed without losing
 flexibility or ease-of-use in the user-interface. The API for `Gala` was
 designed to provide a class-based and user-friendly interface to fast (C or
