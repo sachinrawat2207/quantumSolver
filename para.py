@@ -14,7 +14,7 @@ Ny = 256
 Nz = 1
 
 # choose initial condition
-initcond=1
+initcond=4
 
 volume = Lx*Ly*Lz
 

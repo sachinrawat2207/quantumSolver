@@ -68,6 +68,32 @@ class GPE:
 
 
 #---------------------------------------Additional functions-----------------------------------------------------
+    
+    def velocity(self):
+        '''
+        compute the velocity of the wavefunction
+        '''
+        theta=ncp.angle(self.wfc)
+        thetak=my_fft.forward_transform(theta)
+        vkx=1j*my_fft.kx_mesh*thetak
+        vky=1j*my_fft.ky_mesh*thetak
+        vx=my_fft.inverse_transform(vkx)
+        vy=my_fft.inverse_transform(vky)
+        return vx, vy
+
+#---------------------------------------Energy component calculation-----------------------------------------------------
+
+    def kinetic_energy(self):     # After decompositon of laplacian part
+        vx, vy = self.velocity()
+        return 0.5 * my_fft.dv * ((ncp.sum(ncp.abs(self.psi))**2 *(vx**2 + vy**2)))
+
+    def quantum_energy(self):
+        return 0.5 * my_fft.dv * ((ncp.sum(ncp.gradient(ncp.abs(self.psi))**2)))
+
+    def total_kinetic_energy(self):
+        return 0.5 * my_fft.dv * ncp.sum(ncp.abs(ncp.gradient(self.psi))**2) 
+    
+    
 
     def transfer_function(self):
         self.wfck = my_fft.forward_transform(self.wfc)
@@ -84,17 +110,7 @@ class GPE:
         k=my_fft.kx[1:para.Nx//2]
         return k,flux
 
-    def velocity(self):
-        '''
-        compute the velocity of the wavefunction
-        '''
-        theta=ncp.angle(self.wfc)
-        thetak=my_fft.forward_transform(theta)
-        vkx=1j*my_fft.kx_mesh*thetak
-        vky=1j*my_fft.ky_mesh*thetak
-        vx=my_fft.inverse_transform(vkx)
-        vy=my_fft.inverse_transform(vky)
-        return vx,vy
+
         
 
     def comp_KE(self):

@@ -47,7 +47,7 @@ def initcond(G):
     
     # Initial conditions from a file
     elif para.initcond == 4:
-        pass
+        return ncp.sin(2*ncp.pi*my_fft.x_mesh/para.Lx)*ncp.cos(2*ncp.pi*my_fft.y_mesh/para.Ly)
     
     
 

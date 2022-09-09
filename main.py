@@ -15,12 +15,12 @@ os.chdir(path)
 G = GPE()
 G.set_arrays()
 init_cond.initcond(G)
-G.wfc = G.wfc/G.norm()**0.5
+print(G.velocity())
 
 
 # Setting data storage path
 
-
+'''
 t = para.dt
 j = 0
 for i in range(para.nstep):
@@ -37,3 +37,4 @@ for i in range(para.nstep):
         f.close()
         j = j+1
     t = t+para.dt
+'''
