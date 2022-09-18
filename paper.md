@@ -1,9 +1,11 @@
 ---
-title: 'Gala: A Python package for galactic dynamics'
+title: 'Quantum Solver: A python GPU solver to studey turbulence in quantum system.'
 tags:
   - Python
   - Quantum turbulence
   - Bose-Einstein condensate
+  - Quantum Fluids
+  
 
 
 authors:
@@ -28,59 +30,38 @@ affiliations:
  - name: Department of Physics, Indian Institute of Technology - Guwahati, Asam - 781039, India
    index: 2
 
-date: 09 August 2022
-bibliography: paper.bib
-
-# Optional fields if submitting to a AAS journal too, see this blog post:
-# https://blog.joss.theoj.org/2018/12/a-new-collaboration-with-aas-publishing
-aas-doi: 10.3847/xxxxx <- update this with the DOI from AAS once you know it.
-aas-journal: Astrophysical Journal <- The name of the AAS journal.
+date: 19 August 2022
+bibliography: resources/paper.bib
 ---
-
 # Summary
+
+Turbulence is the complex and turbulent behaviour of the fluid flows. The turbulence in classical system is studied by using the navier strokes equation. Turbulence in quantum system  Quantum systems like Bose-Einsteins condensates differs from the classical system by various ways like zero viscocity and
 The Gross-Pitaevskii equation(GPE) is a useful model to study the quantum turbulence in Bose-Einstein condensate at absolute zero temperature.
-The Bose-Einstein condensate is a quantum fluid system and shows the behavior of superfluid. In quantum fluid, the wave nature of particles starts dominating i.e., the de Broglie wavelength of the particles becomes greater than the inter-atomic distances between the particles. 
-
-
-
-# Statement of need
-
-`Quantum solver` is an Astropy-affiliated Python package for galactic dynamics. Python
-enables wrapping low-level languages (e.g., C) for speed without losing
-flexibility or ease-of-use in the user-interface. The API for `Gala` was
-designed to provide a class-based and user-friendly interface to fast (C or
-Cython-optimized) implementations of common operations such as gravitational
-potential and force evaluation, orbit integration, dynamical transformations,
-and chaos indicators for nonlinear dynamics. `Gala` also relies heavily on and
-interfaces well with the implementations of physical units and astronomical
-coordinate systems in the `Astropy` package [@astropy] (`astropy.units` and
-`astropy.coordinates`).
-
-`Gala` was designed to be used by both astronomical researchers and by
-students in courses on gravitational dynamics or astronomy. It has already been
-used in a number of scientific publications [@Pearson:2017] and has also been
-used in graduate courses on Galactic dynamics to, e.g., provide interactive
-visualizations of textbook material [@Binney:2008]. The combination of speed,
-design, and support for Astropy functionality in `Gala` will enable exciting
-scientific explorations of forthcoming data releases from the *Gaia* mission
-[@gaia] by students and experts alike.
+The Bose-Einstein condensate is a quantum fluid system and shows the behavior of superfluid. In quantum fluid, the wave nature of particles starts dominating i.e., the de Broglie wavelength of the particles becomes greater than the inter-atomic distances between the particles.
 
 # Mathematics
 
-Single dollars ($) are required for inline mathematics e.g. $f(x) = e^{\pi/x}$
+The GPE(Gross-Pitaevskii equation)  is given by
 
-Double dollars make self-standing equations:
+\begin{equation}\label{eq:GPE}
 
-$$\Theta(x) = \left\{\begin{array}{l}
-0\textrm{ if } x < 0\cr
-1\textrm{ else}
-\end{array}\right.$$
+\iota\hbar\frac{\partial\Psi}{\partial t}=-\frac{\hbar^2}{2m}\nabla^2\Psi+V(\bm{r},t)\Psi+g|\Psi|^2\Psi
 
-You can also use plain \LaTeX for equations
-\begin{equation}\label{eq:fourier}
-\hat f(\omega) = \int_{-\infty}^{\infty} f(x) e^{i\omega x} dx
 \end{equation}
-and refer to \autoref{eq:fourier} from text.
+
+Where, $\Psi$ is the wavefunction, $V(\bm{r},t)$ is trapping potential, $g$ is the interaction term.
+
+and refer to \autoref{eq:GPE} from text.
+
+# Nmerical Scheme and functionalities
+
+``Quantum Solver`` uses  pseudo specral scheme TSSP(Time Splitting Spectral method) [@bao2003numerical] to solve the dynamic of the GPE. The main advantage of using the TSSP scheme is that it is unconditionally stable scheme. ``Quantum solver`` is primarily designed for studing the turbulence in the quantum system. For these purposes the ``Quantum solver``is equipped with a number of features :
+
+1. Dynamics evolution using either GPU or CPU by changing a switch.
+2. Computation of different types of spectrumm (Energy spectrum, Particle number spectrum etc.) and flux.
+3. Vortex tracking (2D).
+
+# Results
 
 # Citations
 
@@ -94,6 +75,7 @@ If you want to cite a software repository URL (e.g. something on GitHub without 
 citation) then you can do it with the example BibTeX entry below for @fidgit.
 
 For a quick reference, the following citation commands can be used:
+
 - `@author:2001`  ->  "Author et al. (2001)"
 - `[@author:2001]` -> "(Author et al., 2001)"
 - `[@author1:2001; @author2:2001]` -> "(Author1 et al., 2001; Author2 et al., 2002)"
