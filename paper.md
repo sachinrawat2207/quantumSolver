@@ -1,5 +1,5 @@
 ---
-title: 'Quantum Solver: A python GPU solver to studey turbulence in quantum system.'
+title: 'Quantum Solver: A python GPU solver to study turbulence in quantum system.'
 tags:
   - Python
   - Quantum turbulence
@@ -31,8 +31,11 @@ affiliations:
    index: 2
 
 date: 19 August 2022
+
 bibliography: resources/paper.bib
+
 ---
+
 # Summary
 
 Quantum fluid systems exhibit various interesting properties such as zero viscosity and quantized vortex cirulation that aren't found in classical fluid systems. Bose-Einstein condensate is a type of quantum fluid system formed when a dilute gas of bosons is cooled down to a temperature close to absolute zero. One can study turbulence phenomenon in atomic Bose-Einstein condensates(BECs) by using the Gross-Pitaevskii equation, a type of non-linear Schr&ouml;dinger equation. It is given by
@@ -134,8 +137,6 @@ Figure sizes can be customized by adding an optional second parameter:
 
 # Acknowledgements
 
-We acknowledge contributions from Brigitta Sipocz, Syrtis Major, and Semyeong
-Oh, and support from Kathryn Johnston during the genesis of this project.
 
 # References
 
