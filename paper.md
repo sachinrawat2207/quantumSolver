@@ -35,7 +35,7 @@ bibliography: resources/paper.bib
 ---
 # Summary
 
-Quantum fluid systems exhibit various interesting properties such as zero viscosity, quantized vortex cirulation etc. that aren't found in classical fluid systems. One can only explain these phenomenon with the help of quantum mechanics. Bose-Einstein condensate is a type of quantum fluid system formed when a dilute gas of bosons is cooled down to a temperature close to absolute zero. One can study turbulence phenomenon in atomic Bose-Einstein condensates(BECs) by using the Gross-Pitaevskii equation, a type of non-linear Schr&ouml;dinger equation. It is given by
+Quantum fluid systems exhibit various interesting properties such as zero viscosity and quantized vortex cirulation that aren't found in classical fluid systems. Bose-Einstein condensate is a type of quantum fluid system formed when a dilute gas of bosons is cooled down to a temperature close to absolute zero. One can study turbulence phenomenon in atomic Bose-Einstein condensates(BECs) by using the Gross-Pitaevskii equation, a type of non-linear Schr&ouml;dinger equation. It is given by
 
 \begin{equation}
 \label{eqn:GPE}
@@ -91,6 +91,7 @@ Between $t_n$ and $t_{n+1}$, the two steps are connected through strang splittin
 
 where, $\hat{\psi}^{(1)}$ is Fourier transform of $\psi^{(1)}$ and $\psi_n^{(2)}$ is inverse Fourier transform of $\hat{\psi}_n^{(2)}$.
 
+``Ground State Calculations``
 
 
 ``Quantum solver`` is primarily designed for studying turbulence in quantum systems. For these purposes, ``Quantum solver``is equipped with a number of features :
@@ -135,3 +136,4 @@ We acknowledge contributions from Brigitta Sipocz, Syrtis Major, and Semyeong
 Oh, and support from Kathryn Johnston during the genesis of this project.
 
 # References
+
