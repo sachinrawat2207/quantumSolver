@@ -93,7 +93,7 @@ where, $\hat{\psi}^{(1)}$ is Fourier transform of $\psi^{(1)}$ and $\psi_n^{(2)}
 
 Ground State Calculations:
 
-Ground state for a given system can be calculated by using imaginary time method wherein all the eigenstates except the groundstate of the system decay with time. To accomplish this one replaces t with -it and renormalises the wavefunction after every iteration.
+Ground state for a given system are calculated by using imaginary time method wherein all the eigenstates except the groundstate of the system decay with time. To accomplish this one replaces t with -it and renormalises the wavefunction after every iteration.
 
 
 ``Quantum solver`` is primarily designed for studying turbulence in quantum systems. For these purposes, ``Quantum solver``is equipped with a number of features :
