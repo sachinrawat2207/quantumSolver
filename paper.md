@@ -45,6 +45,8 @@ Quantum fluid systems exhibit various interesting properties such as zero viscos
 where, $\Psi(\vec{r},t)$ is the macroscopic complex wave function,  $m$ is the atomic mass, $V(\vec{r},t)$ is the trapping potential, $g=\frac{4\pi\hslash^2a_s}{m}$ is the nonlinear interaction parameter and $a_s$ denotes the scattering length for the interaction of the atomic particles.
 
 # Statement of Need
+Quantum Solver is robust and easy to use and having capablities of running for both GPU and CPU. Quantum solver is specifically designed to study the quantum turbulence in Bose-Einstein condendates. There are no pakages available to solve GPE for python which can run on a GPU however there exist other packages which includes GPELab[@Antoine2014], and cuda enbled GPUE[@schloss2018gpue] available to solve GPE.     
+
 
 # Numerical Scheme and functionalities
 
@@ -74,28 +76,30 @@ Between $t_n$ and $t_{n+1}$, the two steps are connected through strang splittin
 
 \begin{eqnarray}
 \psi_n^{(1)} = \psi_n e^{-\iota(V + g|\psi_n|^2)\frac{\Delta t}{2}} \\
-\hat{\psi}_n^{(2)} = \hat{\psi}_n^{(1)}e^{-\iota\frac{\textbf{k}^2}{2}\Delta t} \\
+\hat{\psi}_n^{(2)} = \hat{\psi}_n^{(1)}e^{-\iota\frac{\vec{k}^2}{2}\Delta t} \\
 \psi_{n+1} = \psi_n^{(2)} e^{-\iota(V + g|\psi_n^{(2)}|^2)\frac{\Delta t}{2}}
 \end{eqnarray}
 
 where, $\hat{\psi}^{(1)}$ is Fourier transform of $\psi^{(1)}$ and $\psi_n^{(2)}$ is inverse Fourier transform of $\hat{\psi}_n^{(2)}$.
 
-Ground State Calculations:
-
-Ground state for a given system are calculated by using imaginary time method wherein all the eigenstates except the groundstate of the system decay with time. To accomplish this one replaces t with -it and renormalises the wavefunction after every iteration.
+One can calculate the ground state for a given system  by using imaginary time proppogation method wherein all the eigenstates except the groundstate of the system decay with time. In imaginary time propagation method, $t$ is replaced by -$\iota t$ and then evolved.
 
 ``Quantum solver`` is primarily designed for studying turbulence in quantum systems. For these purposes, ``Quantum solver``is equipped with a number of features :
 
 1. Dynamics evolution using either GPU or CPU by changing a switch.
-2. Computation of different types of spectrumm (Energy spectrum, Particle number spectrum etc.) and flux.
-3. Vortex tracking (2D).
+2. Ground state calculation using imaginary time propagation method.
+3. Computation of different types of spectrumm (Energy spectrum, Particle number spectrum etc.) and flux.
+4. Vortex tracking (2D).
 
 # Results
+We have validated our code by following ways:
+1. We compared our results with bao et al.[@bao2003numerical]. for the following condition:
+ $V=\frac{1}{2}(x^2+\gamma_y^2y^2+\gamma_z^2z^2)$ and $\psi(\vec{r},0)=\frac{(\gamma_y\gamma_z)^{1/4}}{\sqrt{(\pi\epsilon_1)^{3/4}}}e^{-\frac{(x^2+\gamma_yy^2+\gamma_zz^2)}{2\epsilon_1}}$ 
+where, $\gamma_y=2.0, \ \gamma_z=4.0, \ \epsilon_1=\frac{1}{4}  \ \kappa_3=0.1$. 
+Fig(\ref{fig:1}) shows the comparisons of rms values of $x,y,z$ at different times of quantum solver with bao et al.[@bao2003numerical]. The results obtained from the ``Quantum solver`` are in good agreement with the results obtained from the bao et al. for the same set of initial condition.
 
-# Citations
+![The lines in the figure shows the rms values obtained from the quantum solver and dots shows the results obtained from the  bao et al[@bao2003numerical].\label{fig:1}](figcond1.jpg)
 
-
-# Figures
 
 # Acknowledgements
 
