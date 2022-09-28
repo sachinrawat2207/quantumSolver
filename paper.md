@@ -98,7 +98,7 @@ We have validated our code by following ways:
 where, $\gamma_y=2.0, \ \gamma_z=4.0, \ \epsilon_1=\frac{1}{4}  \ \kappa_3=0.1$. 
 Fig(\ref{fig:1}) shows the comparisons of rms values of $x,y,z$ at different times of quantum solver with bao et al.[@bao2003numerical]. The results obtained from the ``Quantum solver`` are in good agreement with the results obtained from the bao et al. for the same set of initial condition.
 
-![The lines in the figure shows the rms values obtained from the quantum solver and dots shows the results obtained from the  bao et al[@bao2003numerical].\label{fig:1}](figcond1.jpg)
+![The lines in the figure shows the rms values obtained from the quantum solver and dots shows the results obtained from the  bao et al[@bao2003numerical].\label{fig:1}](resources/figcond1.jpg)
 
 
 # Acknowledgements
